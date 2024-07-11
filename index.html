@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./style/css/styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me Pookie???</h1>
+            </div>
+            <div class="gif_container">
+                <img src="images/mocha-bear-hearts.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes 🙂‍↕️</button>
+                <button class="btn" id="noButton" onclick="moveButton()" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var button = document.getElementById('noButton');
+                        var maxX = window.innerWidth - button.offsetWidth; // Maximum X position
+                        var maxY = window.innerHeight - button.offsetHeight; // Maximum Y position
+                        
+                        // Adjust maximum positions for a smaller screen (13-inch laptop)
+                        maxX = Math.min(maxX, 1366 - button.offsetWidth); // Maximum X position
+                        maxY = Math.min(maxY, 768 - button.offsetHeight); // Maximum Y position
+                        
+                        // Calculate random positions within adjusted range
+                        var x = Math.random() * maxX;
+                        var y = Math.random() * maxY;
+                        
+                        // Ensure button stays within visible area
+                        x = Math.max(x, 0); // Minimum X position (left edge)
+                        y = Math.max(y, 0); // Minimum Y position (top edge)
+                        x = Math.min(x, maxX); // Maximum X position (right edge)
+                        y = Math.min(y, maxY); // Maximum Y position (bottom edge)
+                        
+                        // Set button position
+                        button.style.left = `${x}px`;
+                        button.style.top = `${y}px`;
+
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>

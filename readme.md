@@ -6,4 +6,4 @@ This whimsical website is your secret weapon for a proposal that's as geeky as i
 
 Feel free to use the code for your own site or any other ingenious purposes. Let's make nerdy love stories one line of code at a time!
 
-URL:https://c0m1-dev.github.io/nerdyGF/
+URL: https://c0m1-dev.github.io/nerdyGF/
